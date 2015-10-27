@@ -66,4 +66,4 @@ echo -e "$GRN iptables -t nat -A PREROUTING -i ppp0 -p tcp --dport 80 -j REDIREC
 echo -e "$GRN iptables -t nat -A PREROUTING -i ppp0 -p tcp --dport 443 -j REDIRECT --to-ports 8888 $RST"
 
 echo -e "$GRN iptables -t nat -A PREROUTING -i ppp0 -p tcp --dport 80 -j DNAT --to 127.0.0.1:8888 $RST"
-echo -e "$GRN iptables -t nat -A PREROUTING -i ppp0 -p tcp --dport 443 -j DNAT --to 8888 $RST"
+echo -e "$GRN iptables -t nat -A PREROUTING -i ppp0 -p tcp --dport 443 -j DNAT --to 127.0.0.1:8888 $RST"
